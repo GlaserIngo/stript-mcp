@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- Shared card shell. scripts/build-ui.mjs inlines the theme CSS and the
+     bundled widget script, so the published resource is fully
+     self-contained for the sandboxed iframe (deny-by-default CSP, no
+     external requests of any kind). -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>__STRIPT_TITLE__</title>
+    <style>
+__STRIPT_STYLE__
+    </style>
+  </head>
+  <body>
+    <main id="stript-card" class="card" data-state="waiting">
+      <p id="stript-waiting" class="note">Waiting for the Stript result.</p>
+    </main>
+    <script>
+__STRIPT_SCRIPT__
+    </script>
+  </body>
+</html>

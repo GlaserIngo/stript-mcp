@@ -1,0 +1,42 @@
+{
+  "name": "@stript/mcp",
+  "version": "1.0.7",
+  "description": "Stript MCP bridge. Anonymize documents with the local Stript app and restore AI answers without PII ever entering the chat.",
+  "license": "MIT",
+  "author": {
+    "name": "Dr. Ingo Glaser",
+    "url": "https://github.com/GlaserIngo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GlaserIngo/stript-mcp.git"
+  },
+  "homepage": "https://github.com/GlaserIngo/stript-mcp#readme",
+  "bugs": "https://github.com/GlaserIngo/stript-mcp/issues",
+  "type": "module",
+  "bin": {
+    "stript-mcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:ui": "node scripts/build-ui.mjs",
+    "check": "npm run build:ui && tsc --noEmit && tsc -p ui --noEmit",
+    "test": "npm run build:ui && vitest run",
+    "build": "npm run build:ui && tsup src/index.ts --format esm --platform node --target node20 --clean",
+    "check:licenses": "node scripts/check-licenses.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.7.4",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.27.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
+  }
+}
