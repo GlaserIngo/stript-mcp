@@ -1,6 +1,6 @@
 {
   "name": "@stript/mcp",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Stript MCP bridge. Anonymize documents with the local Stript app and restore AI answers without PII ever entering the chat.",
   "license": "MIT",
   "author": {

@@ -2,7 +2,7 @@
   "manifest_version": "0.2",
   "name": "stript",
   "display_name": "Stript",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Anonymize documents locally with Stript before their content enters the conversation, and restore AI answers on your own machine.",
   "long_description": "Stript detects personal data in documents on your machine and replaces it with consistent placeholders like [PERSON_1]. With this extension, Claude can ask Stript to anonymize a file before working with it, so the original content never enters the conversation. Restored answers are written to your clipboard or a local file and never appear in the chat. Requires the Stript desktop app with AI integrations enabled in Settings.",
   "author": {
